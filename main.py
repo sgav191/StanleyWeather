@@ -1,4 +1,4 @@
-#Import Libraries
+
 import tkinter as tk
 from os import system
 import requests
@@ -7,20 +7,21 @@ import pybase64
 from datetime import datetime
 import time
 
-#Intro
+
 system('clear')
 print ("Hello and welcome to StanleyWeather!")
 time.sleep(1)
 
-#Setup
-weatherapikey = <YOUR-OPEN-WEATHER-MAP-API-KEY>
+##Please enter your Weather API Key.
+##If you don't have one, you can get one at https://openweathermap.org/api
+weatherapikey = <ENTER-API-KEY>
 cityname = input ("What city would you like to view the weather of: ")
 weatherurl = f"https://api.openweathermap.org/data/2.5/weather?q={cityname}&units=metric&appid={weatherapikey}"
 apirequests = requests.get(weatherurl)
 weather = (apirequests.json())
 
 
-#Declare Weather Variables
+
 status = (weather["weather"][0]["description"])
 temperature = (weather["main"]["temp"])
 temperature = round(temperature)
@@ -35,7 +36,7 @@ min_temp = round(min_temp)
 max_temp = (weather["main"]["temp_max"])
 max_temp = round(max_temp)
 
-#Display Weather Info
+
 system('clear')
 print (f"""Weather - {cityname}
 Status = {status}
