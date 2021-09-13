@@ -13,7 +13,7 @@ print ("Hello and welcome to StanleyWeather!")
 time.sleep(1)
 
 #Setup
-weatherapikey = "0f75f503806c3176afdd53608d0cb935"
+weatherapikey = <YOUR-OPEN-WEATHER-MAP-API-KEY>
 cityname = input ("What city would you like to view the weather of: ")
 weatherurl = f"https://api.openweathermap.org/data/2.5/weather?q={cityname}&units=metric&appid={weatherapikey}"
 apirequests = requests.get(weatherurl)
