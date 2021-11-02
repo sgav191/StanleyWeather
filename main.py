@@ -1,4 +1,3 @@
-
 import tkinter as tk
 from os import system
 import requests
@@ -14,7 +13,7 @@ time.sleep(1)
 
 ##Please enter your Weather API Key.
 ##If you don't have one, you can get one at https://openweathermap.org/api
-weatherapikey = <ENTER-API-KEY>
+weatherapikey = "0f75f503806c3176afdd53608d0cb93"
 cityname = input ("What city would you like to view the weather of: ")
 weatherurl = f"https://api.openweathermap.org/data/2.5/weather?q={cityname}&units=metric&appid={weatherapikey}"
 apirequests = requests.get(weatherurl)
