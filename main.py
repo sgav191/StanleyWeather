@@ -1,11 +1,10 @@
-import tkinter as tk
+"""
+To clear terminal console
+"""
 from os import system
-import requests
-from urllib.request import urlopen
-import pybase64
 from datetime import datetime
 import time
-
+import requests
 
 system('clear')
 print ("Hello and welcome to StanleyWeather!")
@@ -13,13 +12,11 @@ time.sleep(1)
 
 ##Please enter your Weather API Key.
 ##If you don't have one, you can get one at https://openweathermap.org/api
-weatherapikey = "0f75f503806c3176afdd53608d0cb93"
+weatherapikey = YOUR_API_KEY
 cityname = input ("What city would you like to view the weather of: ")
 weatherurl = f"https://api.openweathermap.org/data/2.5/weather?q={cityname}&units=metric&appid={weatherapikey}"
 apirequests = requests.get(weatherurl)
 weather = (apirequests.json())
-
-
 
 status = (weather["weather"][0]["description"])
 temperature = (weather["main"]["temp"])
